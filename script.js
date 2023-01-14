@@ -1,5 +1,7 @@
+
+let api_key = "04a03760452fdabea07d13c24071c6e3";
 let btn = document.querySelector("body");
-// let api_key = "04a03760452fdabea07d13c24071c6e3";
+// let api_key = "enter you api key";
 
 let toggleMenu = document.querySelector(".toggle");
 toggleMenu.addEventListener("click", () => {
@@ -13,35 +15,17 @@ let tv = document.getElementById('tv');
 let container = document.getElementsByClassName("container");
 let url;
 let i = 1;
-let api_key = "04a03760452fdabea07d13c24071c6e3";
- url = `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=en-US&page=${i}`;
+let api_key = "enter api key";
 
 
 window.onload = ()=>{
   fetchData()
 
-tv.addEventListener('click',(e)=>{
-  e.preventDefault();
+
+}
+  url = `
+  https://api.themoviedb.org/3/tv/popular?api_key=${api_key}&language=en-US&page=${i}`
   
-  if(container.innerHTML == ""){
-  console.log('clicked')
-}
-else{
-  console.log('Not clicked')
-  document.body.location.reload();
-  container.innerHTML = "";
-}
-  // url = `
-  // https://api.themoviedb.org/3/tv/popular?api_key=${api_key}&language=en-US&page=${i}`
-  // fetchData();
-})
-
-
-
-
-}
-
-
 
 
 function fetchData(){
@@ -80,3 +64,4 @@ function fetchData(){
       console.log(error);
     });
   }
+
