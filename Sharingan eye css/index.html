@@ -1,0 +1,88 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="sharingan">
+      <div class="circle">
+        <div class="comma">,</div>
+        <div class="comma">,</div>
+        <div class="comma">,</div>
+      </div>
+      
+    </div>
+  </body>
+  <style>
+    body {
+      display: grid;
+      place-items: center;
+      background: #000;
+    }
+    .circle {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: red;
+  animation: rotate 5s linear infinite;
+  box-shadow: rgba(237, 232, 232, 0.965) 0px 0px 13px 5px inset, rgba(241, 6, 6, 0.7) 0px 0px 40px 30px, rgba(251, 4, 4, 0.933) 0px -2px 6px 50px inset;
+}
+.sharingan{
+  height: 400px;
+  width: 400px;
+  display: grid;
+  place-items: center;
+  border: 1px solid gray;
+  border-radius: 0px 300px 0px 300px;
+  transform: rotate(135deg);
+}
+.comma {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  border: 2px solid black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(180deg); 
+  font-size: 100px;
+}
+.comma::after{
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #000;
+  border: 1px solid white;
+  box-shadow: rgba(17, 17, 26, 0.8) 0px 0px 16px 5px, rgba(17, 17, 26, 0.1) 0px 0px 8px 15px, rgba(11, 11, 14, 0.1) 0px 0px 16px 56px, rgba(107, 34, 29, 0.8) 0px 6px 20px inset, rgba(17, 17, 26, 0.1) 0px 0px 8px 24px inset, rgba(228, 11, 40, 0.1) 0px 0px 10px 20px inset;
+}
+@keyframes rotate {
+  0% {
+    transform:rotate(0deg);
+  }
+  100% {
+    transform:rotate(360deg);
+  }
+}
+
+.comma:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+
+.comma:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(295deg);
+}
+
+  </style>
+</html>
